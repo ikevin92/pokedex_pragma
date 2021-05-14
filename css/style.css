@@ -19,6 +19,8 @@ html {
 *:before,
 *:after {
 	box-sizing: inherit;
+	margin: 0;
+	padding: 2;
 }
 
 /** Globales **/
@@ -26,6 +28,7 @@ body {
 	background-color: var(--primario);
 	font-size: 1.6rem;
 	line-height: 1.5;
+    /* overflow: hidden */
 }
 
 h1,
@@ -42,7 +45,7 @@ img {
 /* centrar contenido margenes */
 .contenedor {
 	max-width: 120rem;
-	width: 80%;
+	width: 95%;
 	margin: 0 auto;
 }
 /* acomodando el tamaño del texto */
@@ -78,23 +81,22 @@ img {
 }
 
 /* grid */
-@media (min-width: 320px) {
-	/* .contenedor__pokemon {
+@media (min-width: 768px) {
+	.contenedor__pokemon {
 	
 		display: grid;
 		padding: 2rem;     
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		gap: 3rem;
-	} */
-	.contenedor__pokemon {
+	}
+	/* .contenedor__pokemon {
 		display: flex;
 		gap: 2rem;
 		justify-content: center;
 		padding: 1rem;
-		align-items: center;
-		gap: 3rem;
-	}
+		align-items: center;		
+	} */
 
 	h1 {
 		text-align: left;
@@ -146,6 +148,12 @@ img {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 2rem;
 }
+@media (min-width: 768px) {
+	.grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
 @media (min-width: 320px) {
 	.grid {
 		grid-template-columns: repeat(4, 1fr);
